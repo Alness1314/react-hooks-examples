@@ -1,12 +1,11 @@
 import { useFetch } from "../hooks/useFetch";
-import { JSONTree } from "react-json-tree";
 import { useCounter } from "../hooks/useCounter";
 import { PokemonCard } from "./PokemonCard";
 import { LoadingMessage } from "./LoadingMessage";
 
 export const MultipleCustomHooks = () => {
   const { counter, decrement, increment } = useCounter(1);
-  const { data, hasError, isLoading } = useFetch(
+  const { data, isLoading } = useFetch(
     `https://pokeapi.co/api/v2/pokemon/${counter}`
   );
 

@@ -6,7 +6,7 @@ import { useFetch } from "../hooks/useFetch";
 
 export const Layout = () => {
   const { counter, decrement, increment } = useCounter(1);
-  const { data, hasError, isLoading } = useFetch(
+  const { data, isLoading } = useFetch(
     `https://pokeapi.co/api/v2/pokemon/${counter}`
   );
 
